@@ -36,7 +36,7 @@ new file `report.html`, and there's the timecard.
 `reportFormat` key to a different format (see below). The waltz server app won't
 be able to reference the theme properly and wierd things can happen.**
 
-Some notes
+How else can I reference a timecard?
 ---
 
 Timecards can also be referenced like this:
@@ -46,3 +46,23 @@ Timecards can also be referenced like this:
 Or, send us a pull request in <https://github.com/waltz-app/themes> and then
 reference like this:
 - `theme`
+
+Where can I find "x" in the timecard?
+---
+
+#### General
+- `timecard.name`: The name of the project or entity work is being done for.
+- `timecard.tagline`: A secondary description of the project, usually pertaining
+  to the work done / more info about the business.
+- `timecard.primaryColor`: The primary color associated with the branding of the invoice.
+- `timecard.secondaryColor`: The secondary color associated with the branding of the invoice.
+- `timecard.reportFormat`: The default report the timecard is set to be rendered
+  to when run with `waltz render`.
+- `timecard.card`: A list of times that the user has worked for. This is the
+  "meat" of the whole data structure.
+
+#### Client Rates
+**NOTE: Both of these properties could be defined, and if there is a choice,
+default to using the hourly rate over the total rate.**
+- `timecard.hourlyRate`: The rate the client charges per hour for work completed. This property can be undefined.
+- `timecard.totalRate`: The total cost the client has decided to charge for work completed.
