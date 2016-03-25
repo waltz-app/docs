@@ -54,6 +54,7 @@ Where can I find "x" in the timecard?
 - `timecard.name`: The name of the project or entity work is being done for.
 - `timecard.tagline`: A secondary description of the project, usually pertaining
   to the work done / more info about the business.
+- `timecard.address`: The location of the business; this is represented as an array, with each item being a subsequent line in the address.
 - `timecard.primaryColor`: The primary color associated with the branding of the invoice.
 - `timecard.secondaryColor`: The secondary color associated with the branding of the invoice.
 - `timecard.reportFormat`: The default report the timecard is set to be rendered
