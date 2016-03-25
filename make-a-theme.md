@@ -60,9 +60,16 @@ Where can I find "x" in the timecard?
   to when run with `waltz render`.
 - `timecard.card`: A list of times that the user has worked for. This is the
   "meat" of the whole data structure.
+- `timecard.taxPercent`: How much tax should be applied to the price, specified as a float from `0` to `1` (ie, `0.15` would be 15%)
 
 #### Client Rates
 **NOTE: Both of these properties could be defined, and if there is a choice,
 default to using the hourly rate over the total rate.**
 - `timecard.hourlyRate`: The rate the client charges per hour for work completed. This property can be undefined.
-- `timecard.totalRate`: The total cost the client has decided to charge for work completed.
+- `timecard.totalRate`: The total cost the client has decided to charge for work completed, without tax.
+
+### Totals
+- `totalCost`: The total amount that the client owes.
+- `totalTime`: The total time worked by the client.
+- `paidTime`: The already paid time worked by the client.
+- `paidCost`: The total previously-paid money to the client. This is only really relevant when the client is billed hourly, so this is `null` if `timecard.hourlyRate` isn't set.
