@@ -62,6 +62,7 @@ Where can I find "x" in the timecard?
 - `timecard.card`: A list of times that the user has worked for. This is the
   "meat" of the whole data structure.
 - `timecard.taxPercent`: How much tax should be applied to the price, specified as a float from `0` to `1` (ie, `0.15` would be 15%)
+- `timecard.clientName`: The name of the client the work is completed for, as a string.
 
 #### Client Rates
 **NOTE: Both of these properties could be defined, and if there is a choice,
